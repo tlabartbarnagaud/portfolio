@@ -1,21 +1,42 @@
-<!doctype html>
-<html lang="fr">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Titre de la page</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css ">
+    <title>Thual LABART--BARNAGAUD</title>
 </head>
 
 <body>
+    <nav>
+        <div class="profile">
+            <img src="assets/avatar.png" alt="Logo">
+            <h1>Thual LABART--BARNAGAUD</h1>
+        </div>
 
-  <nav>
-    <img src="photo.jpg" alt="profile photo">
-    <a href="/index.html">
-      <h2>Thual LABART--BARNAGAUD</h2>
-    </a>
-  </nav>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" id="current">Accueil</a></li>
+                <li><a href="">Projets</a></li>
+                <li><a href="">C.V.</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="https://twitter.com/labarn_thual" target="_blank">Twitter</a></li>
+                <li><a href="mailto:tlabartbarnagaud@protonmail.com" target="_blank">Contact</a></li>
+            </ul>            
+        </div>
 
+        <img src="assets/menu.png" alt="Hamburger menu" class="menu-hamburger">
+    </nav>
 </body>
+
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
 </html>

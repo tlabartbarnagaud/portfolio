@@ -1,6 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0 20%;
+    font-family: 'Roboto', sans-serif;;
+    background-color: #3B4252;
+    color: #E5E9F0;
+}
+
+nav {
+    height: 70px;
+    padding: 10px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #2E3440;
+}
+
+nav .profile {
+    display: flex;
+    align-items: center;
+}
+
+nav .profile img {
+    width: 50px;
+    height: 50px;
+}
+
+nav .profile h1 {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+nav .nav-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+nav .nav-links ul li a {
+    text-decoration: none;
+    margin-left: 40px;
+    color: #E5E9F0;
+    border-bottom: 1px solid #2E3440;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav .nav-links ul li a:hover {
+    border-bottom: 1px solid #E5E9F0;
+    text-decoration: none;
+}
+
+nav .nav-links ul li #current {
+    color: #BF616A;
+}
+
+nav .nav-links ul li #current:hover {
+    border-bottom: 1px solid #BF616A;
+}
+
+nav .menu-hamburger {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+    nav {
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+
+    nav .profile {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+
+    nav {
+        padding: 0;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav .nav-links {
+        background-color: #2E3440;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    nav .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links ul li {
+        margin: 25px 0;
+    }
+
+    nav .nav-links ul li a {
+        font-size: 2em;
+    }
+
+    nav .menu-hamburger {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    nav .profile h1 {
+        font-size: 15px;
+    }
+
 }
