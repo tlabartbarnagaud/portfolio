@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
 
 * {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/home/thual/Documents/INFORMATIQUE/Portfolio/assets/low-poly-grid-haikei.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     background-color: #3B4252;
     color: #E5E9F0;
 }
+
+p {
+    font-size: xx-large;
+    text-align: justify;
+}
+
+/* -------------------- */
 
 nav {
     height: 70px;
@@ -38,13 +50,13 @@ nav .profile h1 {
     font-size: 30px;
 }
 
-nav .nav-links ul {
+nav .nav-links {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
 }
 
-nav .nav-links ul li a {
+nav .nav-links a {
     text-decoration: none;
     margin-left: 40px;
     color: #E5E9F0;
@@ -53,27 +65,44 @@ nav .nav-links ul li a {
     cursor: pointer;
 }
 
-nav .nav-links ul li a:hover {
+nav .nav-links a:hover {
     border-bottom: 1px solid #E5E9F0;
-    text-decoration: none;
 }
 
-nav .nav-links ul li #current {
+nav .nav-links #current {
     color: #BF616A;
 }
 
-nav .nav-links ul li #current:hover {
+nav .nav-links #current:hover {
     border-bottom: 1px solid #BF616A;
 }
 
-nav .menu-hamburger {
-    display: none;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 20px;
-    right: 20px;
+/* -------------------- */
+
+.page-content {
+    margin: 0 20%;
 }
+
+.page-content .presentation h1 {
+    padding: 20px 0 10px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.page-content .presentation img {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 30px;
+}
+
+.page-content .presentation p {
+    margin: 20px 0;
+
+}
+
+/* -------------------- */
 
 @media screen and (max-width: 1300px) {
     nav {
@@ -81,63 +110,36 @@ nav .menu-hamburger {
     }
 }
 
-@media screen and (max-width: 1060px) {
 
-    nav .profile {
-        position: absolute;
-        left: 20px;
-        top: 20px;
+@media screen and (max-width: 1055px) {
+    
+    p {
+        font-size: larger;
     }
 
     nav {
-        padding: 0;
-        padding-bottom: 10px;
-        display: flex;
         flex-direction: column;
+        height: 100%;
+        padding-bottom: 20px;
     }
-    
+
     nav .nav-links {
-        background-color: #2E3440;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: -100%;
-        transition: all 0.5s ease;
-    }
-
-    .nav-links.mobile-menu {
-        margin-left: 0;
-    }
-
-    nav .nav-links ul {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
     }
 
-    nav .nav-links ul li {
-        margin: 25px 0;
+    nav .nav-links a {
+        margin: 20px 0 0 0;
+        font-size: 20px;
     }
-
-    nav .nav-links ul li a {
-        font-size: 2em;
-    }
-
-    nav .menu-hamburger {
-        display: block;
-    }
-
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
 
     nav .profile h1 {
-        font-size: 15px;
+        font-size: 20px;
     }
 
 }
